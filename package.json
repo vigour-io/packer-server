@@ -21,17 +21,26 @@
   },
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
+    "express": "^4.13.3",
     "git-spy": "^1.2.4",
-    "vigour-js": "^0.2.3"
+    "npmlog": "^2.0.0",
+    "vigour-fs-promised": "^2.0.1",
+    "vigour-js": "^0.2.3",
+    "vigour-ua": "0.0.1"
   },
   "vigour": {
     "port": {
       "env": "PACKER_SERVER_PORT",
       "val": 9000
     },
-    "lalala": "lala",
-    "something": {
-      "else": 123
-    }
+    "repo": {
+      "address": "git@github.com:vigour-io/vigour-example.git",
+      "branch": "develop"
+    },
+    "platforms": [
+      "android",
+      "ios",
+      "samsungtv"
+    ]
   }
 }
