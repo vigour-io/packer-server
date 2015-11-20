@@ -1,6 +1,21 @@
-var Config = require('vjs/lib/config')
-var packer = require('./src/index')
+var log = require('npmlog')
+var packerServer = require('./src')
+var config = require('./config')
 
-var config = new Config()
+var gsConfig = {
+	port: config.gitSpyPort,
+	owner: config.owner,
+	apiToken: config.apiToken,
+	callbackURL: config.callbackURL
+}
 
-packer.init(config)
+var mmConfig = {
+	repo: config.repo,
+	branch: config.branch,
+	path: config.path,
+	remote: config.remote
+}
+
+packerServer.init(config, gsConfig, mmConfig)
+	.then(() => log.info('packer-server', 'launched successfully'))
+	.catch((err) => log.error('packer-server', err))

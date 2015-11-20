@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "description": "Asset manager for native wrapped application",
   "main": "src/index.js",
-  "bin": {
-    "packer": "bin/packer"
-  },
   "scripts": {
-    "start": "bin/packer",
+    "start": "./run.sh",
     "test": "gaston test"
   },
   "repository": {
@@ -22,25 +19,9 @@
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "git-spy": "^1.2.4",
+    "git-spy": "^2.0.1",
+    "mail-man": "^0.3.1",
     "npmlog": "^2.0.0",
-    "vigour-fs-promised": "^2.0.1",
-    "vigour-js": "^0.2.3",
     "vigour-ua": "0.0.1"
-  },
-  "vigour": {
-    "port": {
-      "env": "PACKER_SERVER_PORT",
-      "val": 9000
-    },
-    "repo": {
-      "address": "git@github.com:vigour-io/vigour-example.git",
-      "branch": "develop"
-    },
-    "platforms": [
-      "android",
-      "ios",
-      "samsungtv"
-    ]
   }
 }
