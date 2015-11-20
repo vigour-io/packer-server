@@ -7,10 +7,10 @@ var Server = module.exports = {
 	app: undefined,
 	start: function(cfg){
 		config = cfg
-		var port = this.port = config.port.val
+		var port = this.port = config.port
 		return new Promise((resolve, reject) => {
 			var app = Server.app = express()
-			app.use(require('./middleware/static'))
+			app.use(require('./middleware/static')(config))
 			app.listen(port, resolve)
 		})
 	}

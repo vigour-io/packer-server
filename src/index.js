@@ -10,7 +10,7 @@ var Packer = module.exports = {
 		log.info('packer-server', 'launching git-spy')
 		log.info('packer-server', ' Repo:', config.repo, '- Branch:', config.branch)
 		return gitSpy.init(gsConfig)
-			.then(() => log.info('git-spy', `listening on port ${config.port}`))
+			.then(() => log.info('git-spy', `listening on port ${gsConfig.port}`))
 			.then(() => log.info('packer-server', 'launching mail-man'))
 			.then(() => mailMan.init(mmConfig))
 			.then(() => log.info('mail-man', 'up and running'))

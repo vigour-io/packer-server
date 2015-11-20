@@ -1,3 +1,5 @@
+var path = require('path')
+
 var config = module.exports = {
 	port: process.env.PACKER_SERVER_PORT,
 	gitSpyPort: process.env.GIT_SPY_PORT,
@@ -10,6 +12,6 @@ var config = module.exports = {
 var splitRepo = config.repo.split('/')
 config.repoName = splitRepo.pop()
 config.owner = splitRepo.pop()
-config.path = '../' + config.repoName
+config.path = path.resolve('../' + config.repoName)
 config.remote = 'git@github.com:' + config.repo + '.git'
 
