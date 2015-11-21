@@ -5,6 +5,7 @@ var config = require('./config')
 var gsConfig = {
 	port: config.gitSpyPort,
 	owner: config.owner,
+	repo: config.repo,
 	apiToken: config.apiToken,
 	callbackURL: config.callbackURL
 }
