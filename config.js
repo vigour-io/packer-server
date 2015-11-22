@@ -12,7 +12,7 @@ var config = module.exports = {
 var splitRepo = config.repo.split('/')
 config.repoName = splitRepo.pop()
 config.owner = splitRepo.pop()
-config.path = path.resolve('../' + config.repoName)
+config.path = path.resolve('./' + config.repoName)
 config.remote = 'git@github.com:' + config.repo + '.git'
 
 var myIP = ip.address()
