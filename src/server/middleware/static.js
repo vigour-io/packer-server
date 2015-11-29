@@ -6,8 +6,8 @@ var config
 
 module.exports = function(cfg){
 	config = cfg
-	var basePath = config.path
-	console.log('basePath', basePath)
+	var basePath = path.join(config.path, 'dist')
+	
 	return function(req, res, next){
 		var url = req.url === '/'? 'build.html' : req.url
 		var fullPath = path.join(basePath, url)
