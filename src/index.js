@@ -23,6 +23,7 @@ var Packer = module.exports = {
 }
 
 var registerGitSpyHook = function(){
+	var currentSHA = undefined
 	var repo = config.repoName
 	var branch = config.branch
 	var subscription = {}
@@ -31,6 +32,13 @@ var registerGitSpyHook = function(){
 	gitSpy.on(subscription, (hookData, diffs) => {
 		console.log('--------- gitspy fired ----------')
 		var sha = hookData.after
+		if(currentSHA){
+			if(currentSHA === sha){
+				log.info(sha, 'is already being handled')
+				return
+			}
+		}
+		currentSHA = sha
 		log.info('git-spy', 'received new push - commit:', sha)
 		log.info('mail-man', 'pulling the latest changes')
 		mailMan.update()
