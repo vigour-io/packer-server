@@ -22,9 +22,9 @@
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "git-spy": "^2.1.1",
+    "git-spy": "~2.1.2",
     "ip": "^1.1.0",
-    "mail-man": "^0.5.1",
+    "mail-man": "~0.5.2",
     "mime": "^1.3.4",
     "npmlog": "^2.0.0",
     "vigour-fs-promised": "^2.0.1",

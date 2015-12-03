@@ -29,6 +29,7 @@ var registerGitSpyHook = function(){
 	subscription[repo] = {}
 	subscription[repo][branch] = true
 	gitSpy.on(subscription, (hookData, diffs) => {
+		console.log('--------- gitspy fired ----------')
 		var sha = hookData.after
 		log.info('git-spy', 'received new push - commit:', sha)
 		log.info('mail-man', 'pulling the latest changes')
