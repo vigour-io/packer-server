@@ -7,9 +7,10 @@ var config
 module.exports = function(cfg){
 	config = cfg
 	var basePath = path.join(config.path, 'dist')
-	
+
 	return function(req, res, next){
 		var url = req.url === '/'? 'build.html' : req.url
+		console.log('serving:', url)
 		var fullPath = path.join(basePath, url)
 		fs.existsAsync(fullPath)
 			.then((exists) => {
@@ -31,10 +32,10 @@ var getPlatform = function(req){
 	console.log(ua)
 
 	switch(ua.platform){
-		case 'ios': 
+		case 'ios':
 			return 'ios'
 			break
-		case 'android': 
+		case 'android':
 			return 'android'
 			break
 		case 'samsung':

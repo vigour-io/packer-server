@@ -18,11 +18,11 @@ var Packer = module.exports = {
 			.then(() => server.start(config))
 			.then(() => log.info('Packer-Server', `is listening on port ${config.port}`))
 			.then(() => log.info('packer-server', 'registering git-spy hook'))
-			.then(registerGitSpyHook)
+			.then(registerGitSpyHooks)
 	}
 }
 
-var registerGitSpyHook = function(){
+var registerGitSpyHooks = function(){
 	var currentSHA = undefined
 	var repo = config.repoName
 	var branch = config.branch
