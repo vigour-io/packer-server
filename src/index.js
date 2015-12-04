@@ -57,7 +57,7 @@ var registerGitSpyHooks = function(){
 		}
 	}
 
-	gitSpy.on(subscription, (hookData, diffs){
+	gitSpy.on(subscription, (hookData, diffs) => {
 		mailman.updateGaston()
 	})
 }
