@@ -52,7 +52,7 @@ var registerGitSpyHooks = function(){
 	subscription = {
 		'gaston': {
 			'master': {
-				'packafe.json': true
+				'package.json': true
 			}
 		}
 	}
