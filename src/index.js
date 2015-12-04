@@ -17,7 +17,7 @@ var Packer = module.exports = {
 			.then(() => log.info('packer-server', 'starting server'))
 			.then(() => server.start(config))
 			.then(() => log.info('Packer-Server', `is listening on port ${config.port}`))
-			.then(() => log.info('packer-server', 'registering git-spy hook'))
+			.then(() => log.info('packer-server', 'registering git-spy hooks'))
 			.then(registerGitSpyHooks)
 	}
 }
@@ -58,6 +58,6 @@ var registerGitSpyHooks = function(){
 	}
 
 	gitSpy.on(subscription, (hookData, diffs) => {
-		mailman.updateGaston()
+		mailMan.updateGaston()
 	})
 }
