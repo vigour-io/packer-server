@@ -32,6 +32,7 @@ var registerGitSpyHook = function(){
 			'version': true
 		}
 	}
+	console.log('subscription', subscription)
 	gitSpy.on(subscription, (hookData, diffs) => {
 		var sha = hookData.after
 		log.info('git-spy', 'received new push - commit:', sha)
