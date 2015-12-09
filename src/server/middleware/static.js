@@ -15,9 +15,16 @@ module.exports = function(cfg){
 		fs.existsAsync(fullPath)
 			.then((exists) => {
 				if(exists){
-					res.setHeader("Content-Type", mime.lookup(fullPath))
-					fs.createReadStream(fullPath)
-						.pipe(res)
+					fs.statAsync(fullPath)
+						.then((stat) => {
+							if stat.isDirectory(){
+								res.status(403).send('forbidden')
+							} else {
+								res.setHeader("Content-Type", mime.lookup(fullPath))
+								fs.createReadStream(fullPath)
+									.pipe(res)
+							}
+						})
 				} else {
 					res.status(404).send('File or directory not found')
 				}
