@@ -17,7 +17,7 @@ module.exports = function(cfg){
 				if(exists){
 					fs.statAsync(fullPath)
 						.then((stat) => {
-							if stat.isDirectory(){
+							if (stat.isDirectory()){
 								res.status(403).send('forbidden')
 							} else {
 								res.setHeader("Content-Type", mime.lookup(fullPath))
