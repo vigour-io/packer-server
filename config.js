@@ -2,11 +2,11 @@ var path = require('path')
 var ip = require('ip')
 
 var config = module.exports = {
-	port: process.env.PACKER_SERVER_PORT,
-	gitSpyPort: process.env.GIT_SPY_PORT,
-	apiToken: process.env.GIT_SPY_API_TOKEN,
-	repo: process.env.MAIL_MAN_REPO,
-	branch: process.env.MAIL_MAN_BRANCH,
+  port: process.env.PACKER_SERVER_PORT,
+  gitSpyPort: process.env.GIT_SPY_PORT,
+  apiToken: process.env.GIT_SPY_API_TOKEN,
+  repo: process.env.MAIL_MAN_REPO,
+  branch: process.env.MAIL_MAN_BRANCH
 }
 
 var splitRepo = config.repo.split('/')
