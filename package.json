@@ -1,6 +1,6 @@
 {
   "name": "packer-server",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Asset manager for native wrapped application",
   "preferGlobal": true,
   "main": "src/index.js",
@@ -15,13 +15,24 @@
     "type": "git",
     "url": "git+https://github.com/vigour-io/packer-server.git"
   },
+  "keywords": [
+    "vigour",
+    "packer",
+    "server"
+  ],
   "author": "dev@vigour.io",
-  "license": "ISC",
+  "contributors": [
+    "Andre Padez <andre@vigour.io>",
+    "Shawn Inder <shawn@vigour.io>"
+  ],
+  "engines": {},
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vigour-io/packer-server/issues"
   },
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
+    "compression": "^1.6.0",
     "express": "^4.13.3",
     "git-spy": "~2.2.0",
     "ip": "^1.1.0",
