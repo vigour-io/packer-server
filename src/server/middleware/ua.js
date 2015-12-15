@@ -1,3 +1,4 @@
+var path = require('path')
 var UA = require('vigour-ua')
 
 module.exports = exports = function (config) {
@@ -9,19 +10,19 @@ module.exports = exports = function (config) {
 
     switch (ua.platform) {
       case 'ios':
-        req.detectedPlatform = 'ios'
+        req.platformWww = path.join('ios', 'vigour-native', 'www')
         break
       case 'android':
-        req.detectedPlatform = 'android'
+        req.platformWww = path.join('android', 'app', 'src', 'main', 'assets')
         break
       case 'samsung':
-        req.detectedPlatform = 'samsungtv'
+        req.platformWww = 'samsungtv'
         break
       case 'lg':
-        req.detectedPlatform = 'lg'
+        req.platformWww = 'lg'
         break
       default:
-        req.detectedPlatform = 'web'
+        req.platformWww = 'web'
         break
     }
     next()
