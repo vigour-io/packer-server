@@ -50,15 +50,15 @@ var registerGitSpyHooks = function () {
       .catch((reason) => log.info('packer-server', reason))
   })
 
-  subscription = {
-    'gaston': {
-      'master': {
-        'package.json': true
-      }
-    }
-  }
-
-  gitSpy.on(subscription, (hookData, diffs) => {
-    mailMan.updateGaston()
-  })
+  // subscription = {
+  //   'gaston': {
+  //     'master': {
+  //       'package.json': true
+  //     }
+  //   }
+  // }
+  //
+  // gitSpy.on(subscription, (hookData, diffs) => {
+  //   mailMan.updateGaston()
+  // })
 }
