@@ -5,11 +5,10 @@ var config
 
 module.exports = function (cfg) {
   config = cfg
-  var basePath = path.join(config.path, 'dist', 'build')
 
   return function (req, res, next) {
     var url = req.url === '/' ? 'build.html' : req.url
-    var fullPath = path.join(basePath, req.platformWww, url)
+    var fullPath = path.join(config.path, 'dist', req.platform, url)
     console.log('serving:', fullPath)
     fs.existsAsync(fullPath)
       .then((exists) => {

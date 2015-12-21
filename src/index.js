@@ -7,6 +7,7 @@ var server = require('./server')
 module.exports = {
   init: function (cfg, gsConfig, mmConfig) {
     config = cfg
+    log.info('packer-server', 'pid:', process.pid)
     log.info('packer-server', 'launching git-spy')
     log.info('packer-server', ' Repo:', config.repo, '- Branch:', config.branch)
     return gitSpy.init(gsConfig)
