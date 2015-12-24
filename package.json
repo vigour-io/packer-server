@@ -3,7 +3,7 @@
   "version": "0.1.9",
   "description": "Asset manager for native wrapped application",
   "preferGlobal": true,
-  "main": "src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "start": "./run.sh",
     "test": "gaston test"
@@ -41,5 +41,29 @@
     "npmlog": "^2.0.0",
     "vigour-fs-promised": "^2.0.1",
     "vigour-ua": "0.0.3"
+  },
+  "vigour": {
+    "port": {
+      "val": 9090,
+      "_env": "PACKER_SERVER_PORT",
+      "_description": "Port on which packer server should listen for requests"
+    },
+    "gitSpyPort": {
+      "val": 60111,
+      "_env": "GIT_SPY_PORT",
+      "_description": "Port on which git-spy should listen for web hooks"
+    },
+    "apiToken": {
+      "_env": "GIT_SPY_API_TOKEN",
+      "_description": "GitHub API token for git-spy"
+    },
+    "repo": {
+      "_env": "MAIL_MAN_REPO",
+      "_description": "Repo to server"
+    },
+    "branch": {
+      "_env": "MAIL_MAN_BRANCH",
+      "_description": "Branch to server"
+    }
   }
 }
