@@ -49,16 +49,4 @@ var registerGitSpyHooks = function () {
       .then(() => log.info('packer-server', 'ready to serve the latest changes'))
       .catch((reason) => log.info('packer-server', reason))
   })
-
-  // subscription = {
-  //   'gaston': {
-  //     'master': {
-  //       'package.json': true
-  //     }
-  //   }
-  // }
-  //
-  // gitSpy.on(subscription, (hookData, diffs) => {
-  //   mailMan.updateGaston()
-  // })
 }
