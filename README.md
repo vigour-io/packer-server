@@ -9,7 +9,7 @@
 `$ npm i -g packer-server`
 
 ## Usage:
-- set up the following environment variables (or assign values another way: see vigour-js/lib/config):
+- set up the following environment variables (or assign values another way: see vigour-config):
 ```
 PACKER_SERVER_PORT=9090 # the port from where the files are being served
 GIT_SPY_PORT=60111 # the port git-spy will listen for the webhooks from github
