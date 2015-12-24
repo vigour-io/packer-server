@@ -1,2 +1,9 @@
 #!/usr/bin/env node
-require('../index')
+'use strict'
+
+var Config = require('vigour-js/lib/config') // TODO remove all lines with this comment?
+var config = new Config() // TODO remove all lines with this comment?
+var Service = require('../')
+
+var service = new Service(config) // TODO remove all lines with this comment? Replace this line with `var service = new Service()`
+service.start()
