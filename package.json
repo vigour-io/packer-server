@@ -5,7 +5,7 @@
   "preferGlobal": true,
   "main": "./lib/index.js",
   "scripts": {
-    "start": "./run.sh",
+    "start": "./bin/packer-server",
     "test": "gaston test"
   },
   "bin": {
@@ -57,6 +57,9 @@
     "apiToken": {
       "_env": "GIT_SPY_API_TOKEN",
       "_description": "GitHub API token for git-spy"
+    },
+    "local": {
+      "val": false
     },
     "repo": {
       "_env": "MAIL_MAN_REPO",
