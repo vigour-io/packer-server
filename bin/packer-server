@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 'use strict'
-
-var Config = require('vigour-config') // TODO remove all lines with this comment?
-var config = new Config() // TODO remove all lines with this comment?
 var Service = require('../')
-
-var service = new Service(config) // TODO remove all lines with this comment? Replace this line with `var service = new Service()`
+var service = new Service()
 service.start()
