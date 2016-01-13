@@ -68,6 +68,12 @@
     "branch": {
       "_env": "MAIL_MAN_BRANCH",
       "_description": "Branch to server"
+    },
+    "gitUsername": {
+      "val": false
+    },
+    "gitPassword": {
+      "val": false
     }
   }
 }
