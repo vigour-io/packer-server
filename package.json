@@ -23,9 +23,9 @@
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "git-spy": "~2.2.0",
+    "git-spy": "vigour-io/git-spy#andre-stable",
     "ip": "^1.1.0",
-    "mail-man": "~0.5.4",
+    "mail-man": "vigour-io/mail-man#andre-stable",
     "mime": "^1.3.4",
     "npmlog": "^2.0.0",
     "vigour-fs-promised": "^2.0.1",
