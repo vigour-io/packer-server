@@ -13,7 +13,6 @@ module.exports = function (cfg) {
     // console.log('serving:', url)
     var platform = 'web' // getPlatform(req)
     var fullPath = path.join(basePath, platform, url)
-    console.log('fullPath', fullPath)
     fs.existsAsync(fullPath)
       .then((exists) => {
         if (exists) {
