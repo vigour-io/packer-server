@@ -10,9 +10,9 @@ module.exports = function (cfg) {
 
   return function (req, res, next) {
     var url = req.url === '/' ? 'build.html' : req.url
-    console.log('serving:', url)
     var platform = getPlatform(req)
     var fullPath = path.join(basePath, platform, url)
+    console.log('serving:', path.join(platform, url))
     fs.existsAsync(fullPath)
       .then((exists) => {
         if (exists) {
