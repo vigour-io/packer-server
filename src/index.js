@@ -1,3 +1,5 @@
+'use strict'
+
 var config
 var log = require('npmlog')
 var mailMan = require('mail-man')
@@ -25,12 +27,7 @@ module.exports = {
 var registerGitSpyHooks = function () {
   var currentSHA
   var repo = config.repoName
-  var branch = config.branch
-  var subscription = {}
-  subscription[repo] = {}
-  subscription[repo][branch] = {
-    'package.json': true
-  }
+  var subscription = { [repo]: { '*' : true } }
 
   gitSpy.on(subscription, (hookData, diffs) => {
     console.log('--------- gitspy fired ----------')
