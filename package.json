@@ -74,6 +74,21 @@
     },
     "gitPassword": {
       "val": false
+    },
+    "runClean": {
+      "val": false
+    },
+    "runInstall": {
+      "val": false
+    },
+    "runTest": {
+      "val": false
+    },
+    "runBuild": {
+      "val": false
+    },
+    "runDist": {
+      "val": false
     }
   }
 }
