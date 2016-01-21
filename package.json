@@ -34,9 +34,9 @@
   "dependencies": {
     "compression": "^1.6.0",
     "express": "^4.13.3",
-    "git-spy": "~2.2.1",
+    "git-spy": "~2.2.4",
     "ip": "^1.1.0",
-    "mail-man": "~0.5.16",
+    "mail-man": "~0.5.17",
     "mime": "^1.3.4",
     "npmlog": "^2.0.0",
     "vigour-config": "0.0.7",
@@ -70,10 +70,12 @@
       "_description": "Branch to server"
     },
     "gitUsername": {
-      "val": false
+      "val": false,
+      "_env": "MAIL_MAN_GITHUB_USERNAME"
     },
     "gitPassword": {
-      "val": false
+      "val": false,
+      "_env": "MAIL_MAN_GITHUB_PASSWORD"
     },
     "runClean": {
       "val": false
