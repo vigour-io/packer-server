@@ -1,6 +1,6 @@
 {
   "name": "packer-server",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Asset manager for native wrapped application",
   "preferGlobal": true,
   "main": "./lib/index.js",
