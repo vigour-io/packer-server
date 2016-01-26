@@ -91,6 +91,9 @@
     },
     "runDist": {
       "val": false
+    },
+    "verbose": {
+      "val": false
     }
   }
 }
