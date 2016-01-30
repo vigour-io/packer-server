@@ -94,6 +94,9 @@
     },
     "verbose": {
       "val": false
+    },
+    "robots": {
+      "val": false
     }
   }
 }
