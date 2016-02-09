@@ -6,7 +6,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "start": "./bin/packer-server",
-    "test": "gaston test"
+    "test": "gaston test -r node"
   },
   "bin": {
     "packer-server": "bin/packer-server"
@@ -41,6 +41,18 @@
     "vigour-config": "0.0.7",
     "vigour-fs-promised": "^2.0.1",
     "vigour-ua": "0.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect",
+      "before",
+      "after",
+      "beforeEach",
+      "afterEach",
+      "sinon"
+    ]
   },
   "vigour": {
     "port": {
