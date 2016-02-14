@@ -55,6 +55,10 @@
     ]
   },
   "vigour": {
+    "entry": {
+      "val": "build.html",
+      "_description": "File to serve when the `/` route is requested"
+    },
     "port": {
       "val": 9090,
       "_env": "PACKER_SERVER_PORT",
