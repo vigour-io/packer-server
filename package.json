@@ -38,6 +38,7 @@
     "ip": "^1.1.0",
     "mail-man": "~0.5.17",
     "npmlog": "^2.0.0",
+    "query-string": "^3.0.0",
     "vigour-config": "0.0.7",
     "vigour-fs-promised": "^2.0.1",
     "vigour-ua": "0.0.3"
@@ -119,6 +120,10 @@
     "findAssets": {
       "val": true,
       "_desciption": "Whether find missing assets by removing parts of the path or not"
+    },
+    "shutter": {
+      "val": "http://img.vigour.io",
+      "_description": "The Shutter to send facebook open graph image requests to for resizing"
     }
   }
 }
