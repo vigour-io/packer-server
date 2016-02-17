@@ -115,6 +115,10 @@
     },
     "appData": {
       "val": false
+    },
+    "findAssets": {
+      "val": true,
+      "_desciption": "Whether find missing assets by removing parts of the path or not"
     }
   }
 }
