@@ -119,7 +119,7 @@
     },
     "findAssets": {
       "val": true,
-      "_desciption": "Whether find missing assets by removing parts of the path or not"
+      "_desciption": "Whether to find missing assets by removing parts of the path or not"
     },
     "shutter": {
       "val": "http://img.vigour.io",
