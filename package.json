@@ -93,6 +93,21 @@
       "val": false,
       "_env": "MAIL_MAN_GITHUB_PASSWORD"
     },
+    "gwfURL": {
+      "val": false,
+      "description": "URL of the Github Webhook Forwarding service git-spy should subscribe to",
+      "_env": "GIT_SPY_GWF_URL"
+    },
+    "gwfUser": {
+      "val": false,
+      "description": "Username for authentication with the Github Webhook Forwarding service",
+      "_env": "GIT_SPY_GWF_USER"
+    },
+    "gwfPass": {
+      "val": false,
+      "description": "Password for authentication with the Github Webhook Forwarding service",
+      "_env": "GIT_SPY_GWF_PASS"
+    },
     "runClean": {
       "val": false
     },
