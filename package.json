@@ -138,7 +138,20 @@
     },
     "shutter": {
       "val": "http://img.vigour.io",
-      "_description": "The Shutter to send facebook open graph image requests to for resizing"
+      "_description": "URL of the Shutter to send facebook open graph image resizing requests",
+      "_env": "PACKER_SHUTTER"
+    },
+    "slack": {
+      "id": {
+        "val": false,
+        "_description": "Slack ID for sending warnings",
+        "_env": "PACKER_SLACK_ID"
+      },
+      "channel": {
+        "val": false,
+        "_description": "Channel to send slack warnings to",
+        "_env": "PACKER_SLACK_CHANNEL"
+      }
     }
   }
 }
