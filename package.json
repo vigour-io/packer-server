@@ -34,7 +34,7 @@
   "dependencies": {
     "compression": "^1.6.0",
     "express": "^4.13.3",
-    "git-spy": "~2.2.4",
+    "git-spy": "^3.0.0",
     "ip": "^1.1.0",
     "mail-man": "~0.5.17",
     "npmlog": "^2.0.0",
