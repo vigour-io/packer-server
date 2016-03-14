@@ -5,6 +5,7 @@
   "preferGlobal": true,
   "main": "./lib/index.js",
   "scripts": {
+    "dev": "./bin/packer-server | ./node_modules/.bin/bunyan",
     "start": "./bin/packer-server",
     "test": "gaston test -r node"
   },
