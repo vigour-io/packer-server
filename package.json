@@ -79,11 +79,11 @@
     },
     "repo": {
       "_env": "MAIL_MAN_REPO",
-      "_description": "Repo to server"
+      "_description": "Repo to server (`<owner>/<repository>`)"
     },
     "branch": {
       "_env": "MAIL_MAN_BRANCH",
-      "_description": "Branch to server"
+      "_description": "Branch to serve"
     },
     "gitUsername": {
       "val": false,
