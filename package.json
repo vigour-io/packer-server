@@ -5,6 +5,7 @@
   "preferGlobal": true,
   "main": "./lib/index.js",
   "scripts": {
+    "dev": "./bin/packer-server | ./node_modules/.bin/bunyan",
     "start": "./bin/packer-server",
     "test": "gaston test -r node"
   },
@@ -32,12 +33,12 @@
   },
   "homepage": "https://github.com/vigour-io/packer-server#readme",
   "dependencies": {
+    "bunyan": "^1.7.1",
     "compression": "^1.6.0",
     "express": "^4.13.3",
     "git-spy": "^3.0.0",
     "ip": "^1.1.0",
     "mail-man": "~0.5.17",
-    "npmlog": "^2.0.0",
     "query-string": "^3.0.0",
     "vigour-config": "0.0.7",
     "vigour-fs-promised": "^2.0.1",
@@ -56,6 +57,10 @@
     ]
   },
   "vigour": {
+    "logger": {
+      "name": "v-scraper",
+      "level": "trace"
+    },
     "entry": {
       "val": "build.html",
       "_description": "File to serve when the `/` route is requested"

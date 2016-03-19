@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 'use strict'
-
+var log = require('../lib/logger')
 var Service = require('../')
 var service = new Service()
-service.start()
+service.start().catch((err) => {
+  log.error({err: err}, 'error staring packer server')
+})
