@@ -71,6 +71,7 @@
       "_description": "Port on which git-spy should listen for web hooks"
     },
     "apiToken": {
+      "val": false,
       "_env": "GIT_SPY_API_TOKEN",
       "_description": "GitHub API token for git-spy"
     },
@@ -78,10 +79,12 @@
       "val": false
     },
     "repo": {
+      "val": false,
       "_env": "MAIL_MAN_REPO",
       "_description": "Repo to server (`<owner>/<repository>`)"
     },
     "branch": {
+      "val": false,
       "_env": "MAIL_MAN_BRANCH",
       "_description": "Branch to serve"
     },
